@@ -63,7 +63,7 @@ export default function FVG() {
         </a>.
         </p> 
         <p className="mt-6">
-            To understand this better, you should also learn about{" "}
+            To understand this better, you should also learn about{' '}
             <a href="/liquidity" className="text-blue-500 underline">
                 liquidity in forex
             </a>.
