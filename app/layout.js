@@ -20,10 +20,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        <header className="p-5 border-b">
+          <div className="max-w-4xl mx-auto flex justify-between">
+            <h1 className="font-bold">ICT Simple</h1>
+
+            <nav className="space-x-4">
+              <a href="/" className="hover:underline">Home</a>
+              <a href="/fvg" className="hover:underline">FVG</a>
+              <a href="/order-block" className="hover:underline">Order Block</a>
+              <a href="/liquidity" className="hover:underline">Liquidity Zone</a>
+              <a href="/about" className="hover:underline">About</a>
+              <a href="/contact" className="hover:underline">Contact</a>
+            </nav>
+          </div>
+        </header>
+
+        <main className="mt-6">{children}</main>
       </body>
     </html>
   );
