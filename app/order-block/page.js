@@ -1,9 +1,12 @@
+import ArticleLayout from "@/components/ArticleLayout";
+
 export default function OrderBlock() {
   return (
-    <main className="p-10 max-w-3xl mx-auto">
+    <ArticleLayout title= "What is an Order Block?" >
+    {/* <main className="p-10 max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">
         What is an Order Block?
-      </h1>
+      </h1> */}
 
       <p className="mb-4">
         An Order Block is an area where large institutional traders have placed orders.
@@ -24,6 +27,7 @@ export default function OrderBlock() {
       <p className="mt-6 text-gray-600">
         In the next lessons, we will learn how to identify valid order blocks.
       </p>
-    </main>
+    {/* </main> */}
+    </ArticleLayout>
   );
 }

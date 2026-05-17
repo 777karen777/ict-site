@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,23 +21,65 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <header className="p-5 border-b">
-          <div className="max-w-4xl mx-auto flex justify-between">
-            <h1 className="font-bold">ICT Simple</h1>
+      <body
+        className={`
+          ${geistSans.variable}
+          ${geistMono.variable}
+          bg-gray-50 h-screen overflow-hidden
+        `}
+      >
+        {/* HEADER */}
+        {/* <header className="fixed top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md border-b z-50">
+          <div className="max-w-5xl mx-auto h-full flex items-center justify-between px-6">
+            <h1 className="font-bold text-xl">
+              ICT Simple
+            </h1>
 
-            <nav className="space-x-4">
-              <a href="/" className="hover:underline">Home</a>
-              <a href="/fvg" className="hover:underline">FVG</a>
-              <a href="/order-block" className="hover:underline">Order Block</a>
-              <a href="/liquidity" className="hover:underline">Liquidity Zone</a>
-              <a href="/about" className="hover:underline">About</a>
-              <a href="/contact" className="hover:underline">Contact</a>
+            <nav className="space-x-4 text-sm">
+              <a href="/" className="hover:underline">
+                Home
+              </a>
+
+              <a href="/fvg" className="hover:underline">
+                FVG
+              </a>
+
+              <a href="/order-block" className="hover:underline">
+                Order Block
+              </a>
+
+              <a href="/liquidity" className="hover:underline">
+                Liquidity
+              </a>
+
+              <a href="/best-brokers" className="hover:underline">
+                Brokers
+              </a>
+
+              <a href="/about" className="hover:underline">
+                About
+              </a>
+
+              <a href="/contact" className="hover:underline">
+                Contact
+              </a>
             </nav>
           </div>
-        </header>
+        </header> */}
 
-        <main className="mt-6">{children}</main>
+        <Navbar />
+
+        {/* SCROLLABLE CONTENT */}
+        <main className="h-screen overflow-y-auto pt-20 pb-20">
+          {children}
+        </main>
+
+        {/* FOOTER */}
+        <footer className="fixed bottom-0 left-0 right-0 h-14 bg-white/80 backdrop-blur-md border-t z-50">
+          <div className="max-w-5xl mx-auto h-full flex items-center justify-center text-sm text-gray-500">
+            © 2026 ICT Simple — Educational purposes only
+          </div>
+        </footer>
       </body>
     </html>
   );

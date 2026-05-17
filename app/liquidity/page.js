@@ -1,11 +1,13 @@
 import Image from "next/image";
+import ArticleLayout from "@/components/ArticleLayout";
 
 export default function Liquidity() {
   return (
-    <main className="p-10 max-w-3xl mx-auto">
+    <ArticleLayout title= "What is Liquidity in Fores?" >
+    {/* <main className="p-10 max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6">
         What is Liquidity in Forex?
-      </h1>
+      </h1> */}
 
       <p className="mb-4">
         Liquidity refers to areas where many stop losses and orders are placed.
@@ -63,6 +65,7 @@ export default function Liquidity() {
                 Order Block in trading . 
             </a>.
         </p>
-    </main>
+    {/* </main> */}
+    </ArticleLayout>
   );
 }
